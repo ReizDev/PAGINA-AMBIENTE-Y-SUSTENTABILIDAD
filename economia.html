@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Puntos Clave - Agenda 21</title>
   <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <header>
@@ -123,7 +124,100 @@ Este punto clave resalta que los países con mayor desarrollo económico tienen 
       <img src="img/global-business-partnership-concept-with-handshake-people-globe-background_1120554-42679.png" alt="Cooperación Internacional">
     </section>
   </main>
+<main>
+  <!-- Sección de Economía y Ambiente -->
+  <section class="content-block">
+    <h1>Economía y Ambiente</h1>
+    <p>La relación entre economía y ambiente es clave para entender los retos del desarrollo sustentable. 
+    El crecimiento económico debe considerar el impacto ambiental y la eficiencia en el uso de recursos.</p>
+  </section>
 
+  <!-- Tabla de indicadores económicos -->
+  <section class="content-block">
+    <h2>Indicadores Económicos y Ambientales (ejemplo)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Indicador</th>
+          <th>Valor Actual</th>
+          <th>Meta 2030</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>PIB con enfoque verde</td>
+          <td>15%</td>
+          <td>40%</td>
+        </tr>
+        <tr>
+          <td>Inversión en energías limpias</td>
+          <td>25% del total</td>
+          <td>60% del total</td>
+        </tr>
+        <tr>
+          <td>Empleos verdes</td>
+          <td>1.2 millones</td>
+          <td>3 millones</td>
+        </tr>
+        <tr>
+          <td>Reducción de emisiones</td>
+          <td>20%</td>
+          <td>50%</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Gráfico dinámico -->
+  <section class="content-block">
+    <h2>Progreso Económico Sustentable</h2>
+    <canvas id="economiaChart"></canvas>
+  </section>
+
+  <!-- Enlaces informativos -->
+  <section class="content-block">
+    <h2>Recursos sobre Economía Sustentable</h2>
+    <ul class="links">
+      <li><a href="https://www.oecd.org/environment/" target="_blank">OCDE - Economía Verde</a></li>
+      <li><a href="https://www.worldbank.org/en/topic/environment" target="_blank">Banco Mundial - Medio Ambiente</a></li>
+      <li><a href="https://unctad.org/topic/trade-and-development/sustainable-development" target="_blank">UNCTAD - Comercio y Desarrollo Sustentable</a></li>
+    </ul>
+  </section>
+</main>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const ctx = document.getElementById("economiaChart").getContext("2d");
+
+  new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: ["2020", "2022", "2024", "2026", "2030"],
+      datasets: [
+        {
+          label: "PIB verde (%)",
+          data: [10, 12, 15, 20, 40],
+          borderColor: "rgba(56, 142, 60, 0.9)",
+          fill: false
+        },
+        {
+          label: "Inversión en energías limpias (%)",
+          data: [15, 18, 25, 35, 60],
+          borderColor: "rgba(30, 136, 229, 0.9)",
+          fill: false
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: "top" },
+        title: { display: true, text: "Tendencias económicas hacia 2030" }
+      }
+    }
+  });
+});
+
+</script>
   <footer>
     <p>© 2026 Proyecto Educativo Sustentable</p>
   </footer>

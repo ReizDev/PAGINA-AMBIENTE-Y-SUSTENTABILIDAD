@@ -191,3 +191,49 @@ footer {
   padding: 15px;
   margin-top: 40px;
 }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+table th {
+  background: #1b5e20;
+  color: #fff;
+}
+
+table tr:nth-child(even) {
+  background: #f1f8e9;
+}
+
+canvas {
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+}
+
+.links li {
+  margin: 10px 0;
+}
+
+.links a {
+  color: #1b5e20;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #388e3c;
+  text-decoration: underline;
+}

@@ -160,3 +160,33 @@ canvas {
   max-width: 100%;
   margin-top: 20px;
 }
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input[type="file"] {
+  padding: 5px;
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+}
+
+.links li {
+  margin: 10px 0;
+}
+
+.links a {
+  color: #1b5e20;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #388e3c;
+  text-decoration: underline;
+}
