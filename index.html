@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Educación para el Desarrollo Sustentable</title>
+  <link rel="stylesheet" href="inicio.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <!-- Header con menú -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="agenda21.html">Agenda 21</a></li>
+        <li><a href="milenio.html">Declaración del Milenio</a></li>
+        <li><a href="sustentable.html">Desarrollo Sustentable</a></li>
+        <li><a href="economia.html">Economía y Ambiente</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Educación para el Desarrollo Sustentable</h1>
+      <p>Construyendo un futuro equilibrado entre sociedad, economía y ambiente 🌍</p>
+      <a href="📘 Guía.pdf" class="btn" download>Descargar Guía PDF</a>
+    </div>
+  </section>
+
+  <!-- Sección introductoria -->
+<main>
+  <!-- Bloque informativo -->
+  <section class="content-block">
+    <h2>¿Qué es el Desarrollo Sustentable?</h2>
+    <p>El desarrollo sustentable equilibra tres pilares fundamentales:</p>
+    <ul>
+      <li>🌱 Ambiental: cuidado del planeta y sus recursos.</li>
+      <li>💼 Económico: crecimiento responsable y eficiente.</li>
+      <li>🤝 Social: bienestar, equidad y participación ciudadana.</li>
+    </ul>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WWnwNO_0heQ?si=zyEwfyvizu27Hd04" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </section>
+
+  <!-- Tabla de estadísticas -->
+  <section class="content-block">
+    <h2>Estadísticas Globales (ejemplo)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Indicador</th>
+          <th>Valor</th>
+          <th>Meta 2030</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Reducción de pobreza</td>
+          <td>30% población en pobreza</td>
+          <td>Menos del 10%</td>
+        </tr>
+        <tr>
+          <td>Acceso a salud</td>
+          <td>65% población con cobertura</td>
+          <td>90% cobertura</td>
+        </tr>
+        <tr>
+          <td>Uso de energías limpias</td>
+          <td>25% del consumo energético</td>
+          <td>60% del consumo energético</td>
+        </tr>
+        <tr>
+          <td>Reciclaje de residuos</td>
+          <td>35% de residuos reciclados</td>
+          <td>70% de residuos reciclados</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Gráfico con Canvas -->
+  <section class="content-block">
+    <h2>Progreso hacia metas sustentables</h2>
+    <canvas id="sustentableChart"></canvas>
+  </section>
+</main>
+
+<script>// Confirmación al enviar archivo
+const form = document.querySelector("form");
+if (form) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("Tu proyecto ha sido enviado correctamente 🌍");
+  });
+}
+
+// Slider automático
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+function showSlide() {
+  slides.forEach((slide, i) => {
+    slide.classList.remove("active");
+    if (i === index) slide.classList.add("active");
+  });
+  index = (index + 1) % slides.length;
+}
+
+setInterval(showSlide, 4000);
+</script>
+<script>// Gráfico con Chart.js
+document.addEventListener("DOMContentLoaded", () => {
+  const ctx = document.getElementById("sustentableChart").getContext("2d");
+  new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: ["Pobreza", "Salud", "Energía limpia", "Reciclaje"],
+      datasets: [
+        {
+          label: "Situación actual (%)",
+          data: [30, 65, 25, 35],
+          backgroundColor: "rgba(56, 142, 60, 0.7)"
+        },
+        {
+          label: "Meta 2030 (%)",
+          data: [10, 90, 60, 70],
+          backgroundColor: "rgba(30, 136, 229, 0.7)"
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: "top" },
+        title: { display: true, text: "Comparación actual vs meta 2030" }
+      }
+    }
+  });
+});
+</script>
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Proyecto Educativo Sustentable</p>
+    <div class="social">
+      <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+    </div>
+  </footer>
+</body>
+</html>

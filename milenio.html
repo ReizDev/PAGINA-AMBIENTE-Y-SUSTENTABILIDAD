@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Declaración del Milenio y sus Objetivos</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="agenda21.html">Agenda 21</a></li>
+        <li><a href="milenio.html">Declaración del Milenio</a></li>
+        <li><a href="sustentable.html">Desarrollo Sustentable</a></li>
+        <li><a href="economia.html">Economía y Ambiente</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Bloque introductorio -->
+    <section class="content-block">
+      <h1>Declaración del Milenio</h1>
+      <p>La Declaración del Milenio fue adoptada por la ONU en el año 2000, estableciendo metas de desarrollo humano, reducción de pobreza y cooperación internacional.</p>
+      <img src="odm-1.png" alt="ONU Declaración del Milenio">
+    </section>
+
+    <!-- Bloque de objetivos -->
+    <section class="content-block">
+      <h2>Objetivos principales</h2>
+      <ul>
+        <li>Erradicar la pobreza extrema y el hambre</li>
+        <li>Lograr la enseñanza primaria universal</li>
+        <li>Promover la igualdad de género</li>
+        <li>Reducir la mortalidad infantil</li>
+        <li>Combatir enfermedades como VIH/SIDA y malaria</li>
+      </ul>
+    </section>
+
+    <!-- Bloque multimedia -->
+    <section class="content-block">
+      <h2>Impacto global</h2>
+      <p>La Declaración del Milenio inspiró los Objetivos de Desarrollo del Milenio (ODM), que marcaron la agenda internacional hasta 2015.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MCKH5xk8X-g?si=QALF20iFn3-_PemP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+    <!-- Bloque oculto con "Leer más" -->
+    <section class="content-block hidden" id="extra-content">
+      <h2>Importancia de los ODS</h2>
+      <p>Tras los ODM, la ONU lanzó los Objetivos de Desarrollo Sostenible (ODS) en 2015, ampliando la visión hacia 2030. La Declaración del Milenio fue clave para sentar las bases de la cooperación internacional en temas sociales, económicos y ambientales.</p>
+      <p>Los Objetivos de Desarrollo Sostenible (ODS) buscan erradicar la pobreza, reducir la desigualdad, proteger el planeta y garantizar el bienestar de todas las personas antes del año 2030. A diferencia de la Agenda 21, los ODS establecen metas más claras, medibles y aplicables a todos los países.
+Son importantes porque promueven el equilibrio entre el desarrollo económico, la protección ambiental y el bienestar social. Además, fomentan la cooperación internacional y la participación de gobiernos, empresas, comunidades y ciudadanos, impulsando soluciones sostenibles a largo plazo para enfrentar los desafíos
+
+“La Agenda 21 sentó las bases del desarrollo sostenible en 1992, y los ODS fortalecen y actualizan ese compromiso mediante metas concretas para enfrentar los desafíos actuales. Ambos representan el esfuerzo mundial por lograr un futuro más justo, equilibrado y sostenible.”
+</p>
+      <img src="globehands_picnik.jpg" alt="Objetivos de Desarrollo Sostenible">
+      <a href="" class="download-btn" download>Descargar Documento</a>
+    </section>
+
+    <button id="toggle-btn">Leer más</button>
+  </main>
+<script>const toggleBtn = document.getElementById("toggle-btn");
+const extraContent = document.getElementById("extra-content");
+
+toggleBtn.addEventListener("click", () => {
+  if (extraContent.classList.contains("hidden")) {
+    extraContent.classList.remove("hidden");
+    toggleBtn.textContent = "Leer menos";
+  } else {
+    extraContent.classList.add("hidden");
+    toggleBtn.textContent = "Leer más";
+  }
+});
+</script>
+  <footer>
+    <p>© 2026 Proyecto Educativo Sustentable</p>
+  </footer>
+</body>
+</html>
